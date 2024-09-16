@@ -11,7 +11,7 @@ void print_list(int a[], int n) {
     printf("\n");
 }
 
-void InsertionSort(int a[], int n) {
+void MergeSort(int a[], int n) {
     for (int i = 1; i < n; i++) {
         int key = a[i];
         int j = i - 1;
@@ -34,7 +34,7 @@ int main(void) {
     //printf("List before sorting\n");
     //print_list(array, N);
 
-    InsertionSort(array, N);
+    MergeSort(array, N);
 
     //printf("List after sorting\n");
     //print_list(array, N);

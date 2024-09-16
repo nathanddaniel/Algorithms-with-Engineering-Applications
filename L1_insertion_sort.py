@@ -1,7 +1,9 @@
 import random
 from array import array
+import time
 
-N = 10
+N = 40000
+
 list = array('i', [0] * N)
 
 def insertion_sort(A, n):
@@ -32,12 +34,16 @@ def main():
     for i in range(0, N):
         list[i] = random.randint(0, 99)
 
-    print("LIST BEFORE SORT")
-    print_list(list, N)
+    #print("LIST BEFORE SORT")
+    #print_list(list, N)
+    t0 = time.time()
 
-    print("LIST AFTER SORT")
+    #print("LIST AFTER SORT")
     insertion_sort(list, N)
-    print_list(list, N)
+    #print_list(list, N)
+    t1 = time.time()
+
+    print(t1-t0)
 
 
 if __name__ == "__main__":

@@ -1,7 +1,8 @@
 import numpy as np
 import random
+import time
 
-N = 10
+N = 80000
 
 # Define array
 arr = np.array([0] * N)
@@ -62,15 +63,19 @@ def print_list(A, n):
 
 def main():
     for i in range(0, N):
-        arr[i] = random.randint(0, 99)
+        arr[i] = random.randint(0, 10*N)
 
     print("START PROGRAM")
     print("LIST BEFORE MERGE SORT")
-    print_list(arr, N)
+    #print_list(arr, N)
+    t0 = time.time()
 
     print("LIST AFTER MERGE SORT")
     merge_sort(arr)
-    print_list(arr, N)
+    #print_list(arr, N)
+    t1 = time.time()
+
+    print(t1-t0)
 
 
 if __name__ == "__main__":
